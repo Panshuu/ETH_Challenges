@@ -1,0 +1,33 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+contract challenge2
+{
+    uint etherValue;
+    uint weiValue;
+    uint gweiValue;
+
+    //function to take ether as input from the user
+    function setEther(uint _ether) public
+    {
+         etherValue = _ether;
+    }
+
+    //function to return the ether value
+    function Ether_Value() public view returns(uint)
+    {
+        return (etherValue);
+    } 
+
+    //function to return the value in wei
+    function Wei_Value() public view returns(uint)
+    {
+        return(etherValue*(10**(18)));
+    } 
+
+    //function to return the value in gwei
+    function Gwei_Value() public view returns(uint)
+    {
+        return(etherValue*(10**(9)));
+    } 
+}
