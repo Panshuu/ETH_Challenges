@@ -1,0 +1,30 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+contract Looping
+{
+    //gas limit: 300000
+    //estimated gas for this transaction (521109) is higher than gasLimit set in the configuration  (0x493e0).
+    uint public a=0;
+    function simpleOperation() public
+    {
+        for(uint i=0; i<1000; i++)
+        {
+            a++;
+        }
+    }
+
+    //Both loops to be run alternatively
+
+    //gas limit: 300000
+    //transaction cost: 201032
+    //execution cost: 179968
+    uint public sum;
+    function complexOperation() public
+    {
+        for(uint i=0; i<100; i++)
+        {
+            sum+=(i**2)+(i**4);
+        }
+    }
+}
