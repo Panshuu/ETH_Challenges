@@ -1,0 +1,50 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+contract challengeContract
+{
+    int number;          // integer variable
+    string myString;     // string variable
+    bool boolean;        // boolean variable
+    address adrs;        // address variable
+
+    //Set and get functions for integer variable
+    function setInt(int _num) public
+    {
+        number=_num;
+    }
+    function getInt() public view returns(int)
+    {
+        return (number);
+    }
+    
+    //Set and get functions for string variable
+    function setString(string memory _myStr) public
+    {
+        myString=_myStr;
+    }
+    function getString() public view returns(string memory)
+    {
+        return (myString);
+    }
+
+    //Set and get functions for boolean variable
+    function setBoolean(bool _bool) public
+    {
+        boolean=_bool;
+    }
+    function getBoolean() public view returns(bool)
+    {
+        return (boolean);
+    }
+
+    //Set and get functions for address variable
+    function setAddress(address _adrs) public
+    {
+        adrs=_adrs;
+    }
+    function getAddress() public view returns(address)
+    {
+        return (adrs);
+    }
+}
